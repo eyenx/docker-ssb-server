@@ -2,7 +2,8 @@
 FROM	node:alpine
 LABEL	maintainer="Toni Tauro <eye@eyenx.ch>"
 ADD	docker-entrypoint.sh	/
-RUN	npm install -g ssb-server \
+RUN	apk add python3 make g++ \
+    && npm install -g ssb-server \
 	&& chmod +x /docker-entrypoint.sh
 VOLUME	/root/.ssb
 EXPOSE	8008

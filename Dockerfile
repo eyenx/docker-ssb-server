@@ -1,6 +1,6 @@
 	
 FROM	node:alpine
-LABEL	org.opencontainers.image.source="Toni Tauro <eye@eyenx.ch>"
+LABEL	org.opencontainers.image.authors="Toni Tauro <eye@eyenx.ch>"
 ADD	docker-entrypoint.sh	/
 RUN	apk add python3 make g++ \
     && npm install -g ssb-server \
